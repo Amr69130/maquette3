@@ -1,0 +1,70 @@
+:root {
+  --primary-color: rgb(33, 133, 208);
+  --primary-color-transparent: rgba(33, 133, 208, 0.5);
+  --secondary-color: rgb(255, 175, 56);
+  --black-transparent: rgba(0, 0, 0, 0.7);
+  --background-color-grey: rgb(240, 240, 240);
+  --box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  --main-font: "Roboto", sans-serif;
+}
+
+body {
+  a:link,
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    /* padding: 5rem; */
+    color: white;
+    background-image: url(images/header_image.avif);
+    background-position: top;
+    background-size: cover;
+    div {
+      display: flex;
+      justify-content: space-around;
+      #logo&link {
+        .logo {
+        }
+        ul {
+        }
+        .suscribe {
+          background-color: rgb(33, 133, 208);
+          color: white;
+          padding: 10px 10px;
+          cursor: pointer;
+        }
+      }
+      #text {
+      }
+    }
+  }
+  main {
+    section {
+      #blocs {
+        /* padding: 5rem; */
+      }
+      #map {
+        /* padding: 5rem; */
+      }
+      #cards {
+        /* padding: 5rem; */
+      }
+      #obj {
+        /* padding: 5rem; */
+      }
+      #blog {
+        /* padding: 5rem; */
+      }
+    }
+  }
+  footer {
+    padding: 20rem;
+  }
+}
