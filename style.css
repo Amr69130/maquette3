@@ -116,14 +116,19 @@ main {
     display: flex;
     justify-content: center;
     text-align: center;
-
     width: 100%;
     max-width: 1200px;
     margin: -4rem auto 4rem;
     color: white;
     padding: 0;
   }
-
+  #cards ul {
+    @media screen and (max-width: 768px) {
+      /* Styles ici pour les écrans ayant une largeur maximale de 768px */
+      display: flex;
+      flex-direction: column;
+    }
+  }
   #cards li {
     flex: 1;
     margin: 0;
