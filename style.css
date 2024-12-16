@@ -121,6 +121,10 @@ main {
       background-color: var(--background-color-grey);
     }
   }
+  #obj-text {
+    text-align: center;
+    margin-bottom: 6rem;
+  }
   #obj-blocs {
     li {
       border: solid 1px rgb(215, 201, 201);
