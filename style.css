@@ -26,11 +26,16 @@ body {
 
 header {
   color: white;
-  background-image: url(images/header_image.avif),
-    linear-gradient(rgba(33, 133, 208, 0.5), rgba(33, 133, 208, 0.5));
+  background-image: linear-gradient(
+      to bottom left,
+      rgba(0, 0, 0, 0.7),
+      rgba(33, 133, 208, 0.5)
+    ),
+    url("images/header_image.avif");
+
   background-position: top;
   background-size: cover;
-  background-blend-mode: overlay;
+
   padding: 2rem;
 
   .logo-info {
@@ -80,11 +85,18 @@ header {
 
 main {
   section {
-    padding: 2rem;
-
+    padding: 0;
+    margin: 0;
     .icon {
       max-width: 50px;
       height: auto;
+    }
+    .subscribe {
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 5px;
+      padding: 10px 20px;
+      text-align: center;
     }
 
     #top-bloc,
@@ -102,7 +114,6 @@ main {
       text-align: center;
       padding: 2em;
       flex: 1;
-      box-sizing: border-box;
     }
 
     #top-bloc li:nth-child(1),
@@ -110,6 +121,31 @@ main {
       background-color: var(--background-color-grey);
     }
   }
+  #obj-blocs {
+    li {
+      border: solid 1px rgb(215, 201, 201);
+    }
+  }
+}
+#blog {
+  color: white;
+  background-image: linear-gradient(
+      to bottom left,
+      rgba(0, 0, 0, 0.7),
+      rgba(33, 133, 208, 0.5)
+    ),
+    url("images/main_image.avif");
+  background-position: center;
+  background-size: cover;
+  padding: 7rem;
+  text-align: right;
+}
+
+#blog p {
+  text-align: left;
+  max-width: 30%;
+  margin-left: auto;
+  margin-bottom: 2rem;
 }
 
 footer {
@@ -124,4 +160,9 @@ footer {
     background-color: black;
     padding: 2rem;
   }
+}
+
+footer p {
+  text-align: left;
+  max-width: 60%;
 }
