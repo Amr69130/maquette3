@@ -7,6 +7,7 @@ body {
     color: white;
     text-decoration: none;
   }
+
   ul,
   ol {
     list-style: none;
@@ -23,16 +24,15 @@ header {
       rgba(33, 133, 208, 0.5)
     ),
     url("images/header_image.avif");
-
   background-position: top;
   background-size: cover;
-
   padding: 2rem;
 
   .logo-info {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
     .logo {
       max-width: 80px;
     }
@@ -40,6 +40,7 @@ header {
     .nav-links {
       display: flex;
       gap: 20px;
+
       li {
         a {
           color: white;
@@ -49,7 +50,6 @@ header {
         .subscribe {
           background-color: rgb(33, 133, 208);
           color: white;
-
           padding: 10px 10px;
           text-align: center;
         }
@@ -60,10 +60,10 @@ header {
   #header-text {
     text-align: center;
     margin-top: 2rem;
+
     h1 {
       font-size: 5rem;
       margin: 0.5rem 0;
-
       font-style: italic;
     }
 
@@ -78,10 +78,12 @@ main {
   section {
     padding: 0;
     margin: 0;
+
     .icon {
       max-width: 50px;
       height: auto;
     }
+
     .subscribe {
       background-color: rgb(33, 133, 208);
       color: white;
@@ -112,6 +114,7 @@ main {
       background-color: rgb(240, 240, 240);
     }
   }
+
   #cards {
     display: flex;
     justify-content: center;
@@ -121,96 +124,108 @@ main {
     margin: -4rem auto 4rem;
     color: white;
     padding: 0;
-  }
-  #cards ul {
-    @media screen and (max-width: 768px) {
-      /* Styles ici pour les écrans ayant une largeur maximale de 768px */
-      display: flex;
-      flex-direction: column;
+
+    ul {
+      @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    li {
+      flex: 1;
+      margin: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 5px;
+    }
+
+    li:nth-child(1) {
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("images/item1.avif");
+    }
+
+    li:nth-child(2) {
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+      background-image: linear-gradient(
+          rgba(33, 133, 208, 0.5),
+          rgba(33, 133, 208, 0.5)
+        ),
+        url("images/item2.avif");
+    }
+
+    li h2 {
+      white-space: nowrap;
     }
   }
-  #cards li {
-    flex: 1;
-    margin: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 5px;
+
+  #obj-text {
+    text-align: center;
+    margin-bottom: 6rem;
   }
 
-  #cards li:nth-child(1) {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url("images/item1.avif");
+  #obj-blocs {
+    li {
+      border: solid 1px rgb(215, 201, 201);
+    }
   }
 
-  #cards li:nth-child(2) {
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  #blog {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
     background-image: linear-gradient(
-        rgba(33, 133, 208, 0.5),
+        rgba(0, 0, 0, 0.7),
         rgba(33, 133, 208, 0.5)
       ),
-      url("images/item2.avif");
-  }
-  #cards li h2 {
-    white-space: nowrap;
-  }
-}
-#obj-text {
-  text-align: center;
-  margin-bottom: 6rem;
-}
-#obj-blocs {
-  li {
-    border: solid 1px rgb(215, 201, 201);
+      url("images/main_image.avif");
+    background-position: center;
+    background-size: cover;
+    padding: 6rem;
+
+    .content {
+      max-width: 40%;
+      text-align: left;
+
+      h2 {
+        margin-left: -5rem;
+      }
+
+      p {
+        margin-left: 0;
+        margin-bottom: 2rem;
+      }
+
+      a {
+        margin: left 0;
+
+        @media screen and (max-width: 768px) {
+          white-space: nowrap;
+        }
+      }
+    }
   }
 }
 
-#blog {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(33, 133, 208, 0.5)),
-    url("images/main_image.avif");
-  background-position: center;
-  background-size: cover;
-  padding: 6rem;
-}
-
-.content {
-  max-width: 40%;
-  text-align: left;
-}
-
-.content h2 {
-  margin-left: -5rem;
-}
-
-.content p {
-  margin-left: 0;
-  margin-bottom: 2rem;
-}
-.content a {
-  margin: left 0;
-  @media screen and (max-width: 768px) {
-    white-space: nowrap;
-  }
-}
 footer {
   color: white;
+
   .logo-info {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background-color: black;
+    padding: 2rem;
+
     .logo {
       max-width: 80px;
     }
-    background-color: black;
-    padding: 2rem;
   }
-}
 
-footer p {
-  text-align: left;
-  max-width: 60%;
+  p {
+    text-align: left;
+    max-width: 60%;
+  }
 }
