@@ -87,7 +87,7 @@ main {
     .subscribe {
       background-color: rgb(33, 133, 208);
       color: white;
-      border-radius: 5px;
+
       padding: 10px 20px;
       text-align: center;
     }
